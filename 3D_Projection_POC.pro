@@ -11,18 +11,21 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 TARGET = 3D_Projection_POC
 TEMPLATE = app
 
+INCLUDEPATH += . includes
 
-SOURCES += main.cpp\
-        mainwindow.cpp \
-    glscene.cpp \
-    projectedobject.cpp \
-    projectedcube.cpp
+UI_HEADERS_DIR += ui
 
-HEADERS  += mainwindow.h \
-    glscene.h \
-    projectedobject.h \
-    projectedcube.h
+SOURCES += src/main.cpp\
+        src/mainwindow.cpp \
+    src/glscene.cpp \
+    src/projectedobject.cpp \
+    src/projectedcube.cpp
 
-FORMS    += mainwindow.ui
+HEADERS  += includes/mainwindow.h \
+    includes/glscene.h \
+    includes/projectedobject.h \
+    includes/projectedcube.h
+
+FORMS    += ui/mainwindow.ui
 
 LIBS += -L/usr/local/lib -lGLU
