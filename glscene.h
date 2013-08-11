@@ -19,22 +19,30 @@
 
 #include <QString>
 #include <QTimer>
+#include <QVector>
+
+#include "projectedobject.h"
 
 class GLScene : public QGLWidget
 {
     Q_OBJECT
 public:
     explicit GLScene(int fps, QString windowTitle, QWidget *parent = 0);
+    virtual ~GLScene();
     virtual void initializeGL();
     virtual void paintGL();
     virtual void resizeGL(int width, int height);
     virtual void keyPressEvent( QKeyEvent *keyEvent );
+    void addProjectedObject(ProjectedObject* object);
 signals:
     
 public slots:
     void timeOut();
+
 private:
     QTimer* _fpsTimer;
+    QVector<ProjectedObject*> _objectsVector;
+
 };
 
 #endif // GLSCENE_H

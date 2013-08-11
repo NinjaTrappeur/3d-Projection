@@ -14,10 +14,14 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    glscene.cpp
+    glscene.cpp \
+    projectedobject.cpp \
+    projectedcube.cpp
 
 HEADERS  += mainwindow.h \
-    glscene.h
+    glscene.h \
+    projectedobject.h \
+    projectedcube.h
 
 FORMS    += mainwindow.ui
 

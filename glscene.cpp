@@ -55,5 +55,18 @@ void GLScene::keyPressEvent( QKeyEvent *keyEvent )
 
 void GLScene::paintGL()
 {
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
+    for(int i=0; i<_objectsVector.size(); ++i)
+        _objectsVector[i]->draw();
+}
+
+void GLScene::addProjectedObject(ProjectedObject *object)
+{
+    _objectsVector.append(object);
+}
+
+GLScene::~GLScene()
+{
+    _fpsTimer->deleteLater();
 }
