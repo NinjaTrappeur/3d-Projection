@@ -43,13 +43,18 @@ void GLScene::timeOut()
     updateGL();
 }
 
+QVector<ProjectedObject *> GLScene::objectsVector() const
+{
+    return _objectsVector;
+}
+
 void GLScene::keyPressEvent( QKeyEvent *keyEvent )
 {
     switch(keyEvent->key())
     {
-        case Qt::Key_Escape:
-            close();
-            break;
+    case Qt::Key_Escape:
+        close();
+        break;
     }
 }
 

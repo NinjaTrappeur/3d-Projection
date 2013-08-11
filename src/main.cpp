@@ -3,6 +3,7 @@
 #include "projectedcube.h"
 
 #include <QApplication>
+#include <iostream>
 
 int main(int argc, char *argv[])
 {
@@ -11,8 +12,8 @@ int main(int argc, char *argv[])
     ProjectedCube* cube = new ProjectedCube(0.0f,0.0f,-6.0f);
     glScene.addProjectedObject(cube);
     glScene.show();
-    //MainWindow w;
-    //w.show();
+    MainWindow w(glScene);
+    w.show();
     
     return a.exec();
 }

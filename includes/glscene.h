@@ -34,6 +34,8 @@ public:
     virtual void resizeGL(int width, int height);
     virtual void keyPressEvent( QKeyEvent *keyEvent );
     void addProjectedObject(ProjectedObject* object);
+    QVector<ProjectedObject *> objectsVector() const;
+
 signals:
     
 public slots:

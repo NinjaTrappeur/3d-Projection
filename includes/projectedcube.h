@@ -8,6 +8,7 @@ class ProjectedCube : public ProjectedObject
 public:
     ProjectedCube(GLfloat x, GLfloat y, GLfloat z);
     virtual void draw();
+    virtual QString toString();
 };
 
 #endif // PROJECTEDCUBE_H

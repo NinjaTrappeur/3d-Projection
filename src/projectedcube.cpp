@@ -53,3 +53,8 @@ void ProjectedCube::draw()
         glVertex3f(1.0f,-1.0f,-1.0f);
     glEnd();
 }
+
+QString ProjectedCube::toString()
+{
+    return "Cube";
+}

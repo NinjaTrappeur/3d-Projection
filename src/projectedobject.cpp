@@ -1,5 +1,7 @@
 #include "projectedobject.h"
 
+#include <iostream>
+
 ProjectedObject::ProjectedObject(GLfloat x, GLfloat y, GLfloat z):
     _x(x),
     _y(y),
@@ -11,32 +13,32 @@ ProjectedObject::ProjectedObject(GLfloat x, GLfloat y, GLfloat z):
 }
 
 
-void ProjectedObject::setx(float x)
+void ProjectedObject::setx(int x)
 {
-    _x = x;
+    _x = GLfloat(x)/100;
 }
 
-void ProjectedObject::sety(float y)
+void ProjectedObject::sety(int y)
 {
-    _y = y;
+    _y = GLfloat(y)/100;
 }
 
-void ProjectedObject::setz(float z)
+void ProjectedObject::setz(int z)
 {
-    _z = z;
+    _z = GLfloat(z)/100 - 6;
 }
 
-void ProjectedObject::setrx(float rx)
+void ProjectedObject::setrx(int rx)
 {
     _rx = rx;
 }
 
-void ProjectedObject::setry(float ry)
+void ProjectedObject::setry(int ry)
 {
     _ry = ry;
 }
 
-void ProjectedObject::setrz(float rz)
+void ProjectedObject::setrz(int rz)
 {
     _rz = rz;
 }

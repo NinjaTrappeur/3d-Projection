@@ -3,6 +3,7 @@
 
 #include <QtOpenGL>
 #include <QObject>
+#include <QString>
 
 class ProjectedObject: public QObject
 {
@@ -11,6 +12,7 @@ class ProjectedObject: public QObject
 public:
     ProjectedObject(GLfloat x, GLfloat y, GLfloat z);
     virtual void draw()=0;
+    virtual QString toString()=0;
 
 protected:
     GLfloat _x;
@@ -21,12 +23,12 @@ protected:
     GLfloat _rz;
 
 public slots:
-    void setx(float x);
-    void sety(float y);
-    void setz(float z);
-    void setrx(float rx);
-    void setry(float ry);
-    void setrz(float rz);
+    void setx(int x);
+    void sety(int y);
+    void setz(int z);
+    void setrx(int rx);
+    void setry(int ry);
+    void setrz(int rz);
 };
 
 #endif // PROJECTEDOBJECT_H
